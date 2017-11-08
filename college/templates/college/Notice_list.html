@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+ .tn{
+ 	width: 200px;
+ 	height: 200px;
+ }
+</style>
+<h1>Notices</h1>
+<form>
+<input type="text" name="si" href="/collge/"/>
+<input type="submit"/>
+</form>
+<table class="table">
+    {% for n1 in object_list %}
+    <tr>    
+    <td>{{ n1.subject }}</td>  
+    <td><a href="/media/{{ n1.attachment1 }}">attach</a></td>
+    </li>
+    </tr>
+    {% endfor %}        
+</table>
+    {% for page in paginator.page_range %}
+    {% if forloop.counter != 1 %} | {% endif %}
+    <a href="?page={{ page }}">{{ page }}</a>
+	{% endfor %}
+
+{% endblock %}
