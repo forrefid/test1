@@ -1,6 +1,7 @@
 Django==1.10
 Pillow==4.0.0
-Jinja2==2.8django-registration-redux==1.7
+Jinja2==2.8
+django-registration-redux==1.7
 django-simple-captcha==0.5.3
 djangorestframework==3.6.2
 djangorestframework-jwt==1.10.0
